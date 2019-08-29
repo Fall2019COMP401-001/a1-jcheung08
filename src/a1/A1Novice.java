@@ -8,7 +8,19 @@ public class A1Novice {
 		
 		Scanner scan = new Scanner(System.in);
 
-		// Your code follows here.
+		int customers = 3;
+		
+		String firstName = "Carrie";
+		String lastName = "Brownstein";
+		double total = 9.05;
+		
+		System.out.println(firstName.charAt(0) + "." + lastName + ":" + total);
+		
+		
+		
+		
+		
+		
 		
 	}
 }
