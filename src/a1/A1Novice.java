@@ -25,8 +25,12 @@ public class A1Novice {
 		String firstNameee = "Janet";
 		String lastNameee = "Weiss";
 		double totalll = 12.50;
+		String correct = String.format("%.2f", totalll);
 		
-		System.out.println(firstNameee.charAt(0) + ". " + lastNameee + ": " + totalll);
+		
+		
+		
+		System.out.println(firstNameee.charAt(0) + ". " + lastNameee + ": " + correct);
 		
 		
 		
