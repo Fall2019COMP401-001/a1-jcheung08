@@ -25,9 +25,8 @@ public class A1Adept {
 		
 		for (int c=0; c<customers; c++) {
 			
-			for (int a=0; a<2; a++) {
-				roster[c + a] = scan.next();
-			}
+			roster[c * 2] = scan.next();
+			roster[(c * 2) + 1] = scan.next();
 			
 			int boughtItems = scan.nextInt();
 			double[] cust = new double[boughtItems];
@@ -45,24 +44,28 @@ public class A1Adept {
 			masterPrice[c] = sum(cust);
 		}
 		
+		// System.out.println(Arrays.toString(masterPrice));
+		System.out.println(Arrays.deepToString(roster));
 		// find biggest spender through roster
-		double max = 0.0;
+		double maxt = 0.0;
 		int element = 0;
 		for (int i=0; i<masterPrice.length; i++) {
-			if (masterPrice[i] > max) {
-				max = masterPrice[i];
+			if (masterPrice[i] > maxt) {
+				maxt = masterPrice[i];
 				element = i;
 			}
 		}
 		
-		double min = 100000.0;
+		
+		double mint = 100000.0;
 		int element2 = 0;
 		for (int i=0; i<masterPrice.length; i++) {
-			if (masterPrice[i] < min) {
-				min = masterPrice[i];
-				element = i;
+			if (masterPrice[i] < mint) {
+				mint = masterPrice[i];
+				element2 = i;
 			}
 		}
+		
 		
 		
 		scan.close();
