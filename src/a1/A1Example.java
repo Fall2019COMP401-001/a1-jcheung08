@@ -14,6 +14,7 @@ public class A1Example {
 		// Set up scanner object to read space-separated values
 		// from console input
 		
+		
 		Scanner scan = new Scanner(System.in);
 
 		// Read in count of numbers to process
@@ -40,14 +41,15 @@ public class A1Example {
 		int sum = calculateValueSum(values);
 		int min = findValueMin(values);
 		int max = findValueMax(values);
-		
+	
 		// Print results
-		
 		System.out.println("Min: " + min);
 		System.out.println("Max: " + max);
 		System.out.println("Average: " + String.format("%.2f", ((double) sum) / ((double) count)));
 		
 	}
+	
+
 	
 	/* calculateValueSum 
 	 * Calculates the sum on an array of integers

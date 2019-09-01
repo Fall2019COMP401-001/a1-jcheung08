@@ -7,37 +7,42 @@ public class A1Novice {
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
-
-		int customers = 3;
 		
-		String firstName = "Carrie";
-		String lastName = "Brownstein";
-		double total = 9.05;
+		int customers = scan.nextInt();
+	
+		String[] namesArray = new String[customers * 2];
 		
-		System.out.println(firstName.charAt(0) + ". " + lastName + ": " + total);
+		for (int i=0; i<namesArray.length; i++) {
+			namesArray[i] = scan.next();
+		}
 		
-		String firstNamee = "Corin";
-		String lastNamee = "Tucker";
-		double totall = 4.55;
-		
-		System.out.println(firstNamee.charAt(0) + ". " + lastNamee + ": " + totall);
-		
-		String firstNameee = "Janet";
-		String lastNameee = "Weiss";
-		double totalll = 12.50;
-		String correct = String.format("%.2f", totalll);
+		// number of items bought by customer
+		int uniqueItems = scan.nextInt();
 		
 		
 		
+		// Initialize
 		
-		System.out.println(firstNameee.charAt(0) + ". " + lastNameee + ": " + correct);
-		
-		
-		
+		double[] itemPrice = new double[uniqueItems];
 		
 		
+		for (int i=0; i<itemPrice.length; i++) {
+			int quantity = scan.nextInt();
+			String useless = scan.next();
+			double price = scan.nextDouble();
+			itemPrice[i] = quantity * price;
+		}
 		
 		
+		// Find total price
+		double totalSum = 0;
+		for (int i=0; i<itemPrice.length; i++) {
+			totalSum = totalSum + itemPrice[i];
+		}
+		
+		
+		
+		System.out.println(namesArray[0].charAt(0) + ". " + namesArray[1] + ": " + totalSum);
 		
 		
 		
