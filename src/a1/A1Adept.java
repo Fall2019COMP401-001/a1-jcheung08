@@ -45,7 +45,7 @@ public class A1Adept {
 		}
 		
 		// System.out.println(Arrays.toString(masterPrice));
-		System.out.println(Arrays.deepToString(roster));
+		// System.out.println(Arrays.deepToString(roster));
 		// find biggest spender through roster
 		double maxt = 0.0;
 		int element = 0;
