@@ -40,11 +40,11 @@ public class A1Novice {
 			totalSum = totalSum + itemPrice[i];
 		}
 		
+		String conversion = String.format("%.2f", totalSum);
 		
-		
-		System.out.println(namesArray[0].charAt(0) + ". " + namesArray[1] + ": " + totalSum);
-		
-		
+		scan.close();
+		System.out.println(namesArray[0].charAt(0) + ". " + namesArray[1] + ": " + conversion);
 		
 	}
+	
 }
