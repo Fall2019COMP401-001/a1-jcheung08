@@ -71,8 +71,8 @@ public class A1Adept {
 		String smallestSpender = String.format("%.2f", minimum(masterPrice));
 		String totalAverage = String.format("%.2f", average(masterPrice));
 		
-		System.out.println("Biggest: " + roster[element * 2] + " " + roster[(element * 2) + 1] + " " + biggestSpender);
-		System.out.println("Smallest: " + roster[element2 * 2] + " " + roster[(element2 * 2) + 1] + " " + smallestSpender);
+		System.out.println("Biggest: " + roster[element * 2] + " " + roster[(element * 2) + 1] + " " + "(" + biggestSpender + ")" );
+		System.out.println("Smallest: " + roster[element2 * 2] + " " + roster[(element2 * 2) + 1] + " " + "(" + smallestSpender + ")" );
 		System.out.println("Average: " + totalAverage);
 		
 		
