@@ -19,16 +19,14 @@ public class A1Adept {
 		// customers
 		int customers = scan.nextInt();
 		
+		String[] roster = new String[customers * 2];
 		double[] masterPrice = new double[customers];
-		String[] winner = new String[2];
-		String[] loser = new String[2];
+		
 		
 		for (int c=0; c<customers; c++) {
-			double findWinner = 0.0;
-			double findLoser = 10000.0;
-			String[] fullName = new String[2];
+			
 			for (int a=0; a<2; a++) {
-				fullName[a] = scan.next();
+				roster[c + a] = scan.next();
 			}
 			
 			int boughtItems = scan.nextInt();
@@ -45,13 +43,25 @@ public class A1Adept {
 				}
 			}
 			masterPrice[c] = sum(cust);
-			if (masterPrice[c] > findWinner) {
-				winner = fullName;
+		}
+		
+		// find biggest spender through roster
+		double max = 0.0;
+		int element = 0;
+		for (int i=0; i<masterPrice.length; i++) {
+			if (masterPrice[i] > max) {
+				max = masterPrice[i];
+				element = i;
 			}
-			if (masterPrice[c] < findLoser) {
-				loser = fullName;
+		}
+		
+		double min = 100000.0;
+		int element2 = 0;
+		for (int i=0; i<masterPrice.length; i++) {
+			if (masterPrice[i] < min) {
+				min = masterPrice[i];
+				element = i;
 			}
-			
 		}
 		
 		
@@ -61,8 +71,8 @@ public class A1Adept {
 		String smallestSpender = String.format("%.2f", minimum(masterPrice));
 		String totalAverage = String.format("%.2f", average(masterPrice));
 		
-		System.out.println("Biggest: " + winner + biggestSpender);
-		System.out.println("Smallest: " + loser + smallestSpender);
+		System.out.println("Biggest: " + roster[element * 2] + " " + roster[(element * 2) + 1] + " " + biggestSpender);
+		System.out.println("Smallest: " + roster[element2 * 2] + " " + roster[(element2 * 2) + 1] + " " + smallestSpender);
 		System.out.println("Average: " + totalAverage);
 		
 		
