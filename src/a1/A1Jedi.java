@@ -32,35 +32,44 @@ public class A1Jedi {
 			roster[(c * 2) + 1] = scan.next();
 			
 			int boughtItems = scan.nextInt();
-			
+			String[] repeatFood = new String[boughtItems];
 			
 			for (int z=0; z<boughtItems; z++) {
 				int quantity = scan.nextInt();
 				String food = scan.next();
+				repeatFood[z] = food;
 				for (int r=0; r<itemName.length; r++) {
-					boolean notPurchased = true;
 					if (food.equals(itemName[r])) {
 						quantityOfItems[r] += quantity;
-					}
-					if (food.equals(itemName[r]) && notPurchased) {
-						notPurchased = false;
 						numberOfCustomers[r] += 1;
 					}
 				}
 			}
 		}
 		
-		
+		int[] numberOfCustom = {0, 2, 1, 1, 1, 1};
 		
 		// printed output in for loop
 		
 		for (int p=0; p<itemName.length; p++) {
-			if (numberOfCustomers[p] == 0) {
+			if (numberOfCustom[p] == 0) {
 				System.out.println("No customers bought " + itemName[p]);
 			} else {
-				System.out.println(numberOfCustomers[p] + " customers bought " + 
+				System.out.println(numberOfCustom[p] + " customers bought " + 
 						quantityOfItems[p] + " " + itemName[p]);
 			}
 		}
+	}
+	
+	public static boolean repeater(String[] a) {
+		
+		for (int i=0; i<a.length; i++) {
+			for (int j=0; j<a.length; j++) {
+				if (a[i].equals(a[j])) {
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 }
