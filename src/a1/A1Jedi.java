@@ -38,9 +38,13 @@ public class A1Jedi {
 				int quantity = scan.nextInt();
 				String food = scan.next();
 				for (int r=0; r<itemName.length; r++) {
+					boolean notPurchased = true;
 					if (food.equals(itemName[r])) {
-						numberOfCustomers[r] += 1;
 						quantityOfItems[r] += quantity;
+					}
+					if (food.equals(itemName[r]) && notPurchased) {
+						notPurchased = false;
+						numberOfCustomers[r] += 1;
 					}
 				}
 			}
